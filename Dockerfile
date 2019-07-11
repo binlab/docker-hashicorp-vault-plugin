@@ -1,7 +1,7 @@
-FROM maven:3.6.1-ibmjava-alpine as maven
+FROM busybox:1.31.0
 
-ARG SOURCE_COMMIT
-ARG GIT_COMMIT
+ENV SOURCE_COMMIT="0"
+ENV GIT_COMMIT="0"
 
 RUN echo "${SOURCE_COMMIT}"
 RUN echo "${GIT_COMMIT}"
